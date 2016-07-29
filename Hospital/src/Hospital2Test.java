@@ -1,4 +1,6 @@
-public class Hospital2Test {
+import junit.framework.TestCase;
+
+public class Hospital2Test extends TestCase {
 
 	public void testAPatientCanDie() throws Exception {
 		Patient doomedPatient = new Patient();
@@ -104,7 +106,4 @@ public class Hospital2Test {
 		assertEquals(3, walkingDeadHospital.getZombies().size());
 		assertEquals(2, walkingDeadHospital.getPatients().size());
 	}
-
-
-
 }

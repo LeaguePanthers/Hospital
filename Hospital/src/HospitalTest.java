@@ -1,3 +1,4 @@
+
 // Copyright Wintriss Technical Schools 2013
 import java.util.List;
 
@@ -87,16 +88,18 @@ public class HospitalTest extends TestCase {
 		} catch (DoctorFullException dfe) {
 			assertTrue(true);
 		}
-assertTrue(testDoctor.getPatients().size() == 3);
+		assertTrue(testDoctor.getPatients().size() == 3);
 	}
 
 	public void test8Patients() throws Exception {
 		// TODO: add 3 new doctors to testHospital using a for loop
-
+		for (int i = 0; i < 3; i++) testHospital.addDoctor(new Doctor());
 		// TODO: add 8 new patients to testHospital using a for loop
+		for (int i = 0; i < 8; i++) testHospital.addPatient(new Patient());
 
 		// hospital assigns patients to doctors
-		// Note: hospitals do not know how many patients can be assigned to a doctor
+		// Note: hospitals do not know how many patients can be assigned to a
+		// doctor
 		// catch the exception when a doctor is full.
 		testHospital.assignPatientsToDoctors();
 		// hospital.getDoctors shows doctors have 3, 3, 2 patients
@@ -106,8 +109,4 @@ assertTrue(testDoctor.getPatients().size() == 3);
 		assertEquals(2, testDoctors.get(2).getPatients().size());
 	}
 
-
-
 }
-
-
